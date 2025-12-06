@@ -1,12 +1,12 @@
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "Settings"
+	InterfaceManager.Folder = "XecretHub/ThemeManager"
     InterfaceManager.Settings = {
-        Theme = "Dark",
+        Theme = "Darker",
         Acrylic = true,
         Transparency = true,
-        MenuKeybind = "LeftControl"
+        MenuKeybind = "End"
     }
 
     function InterfaceManager:SetFolder(folder)
