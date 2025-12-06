@@ -1,7 +1,7 @@
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "Settings"
+	InterfaceManager.Folder = "Xecrethub/Settings"
     InterfaceManager.Settings = {
         Theme = "Darker",
         Acrylic = false,
