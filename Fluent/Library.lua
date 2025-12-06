@@ -1222,7 +1222,15 @@ local aa = {
                         Padding = UDim.new(0, 5),
                         FillDirection = Enum.FillDirection.Horizontal,
                         SortOrder = Enum.SortOrder.LayoutOrder
-                    }), l('TextLabel', {
+                    }), 
+                    l('ImageLabel', {
+                        Image = "rbxassetid://90150694641455",
+                        Size = UDim2.fromOffset(18, 18),
+                        AnchorPoint = Vector2.new(0, 0.5),
+                        Position = UDim2.new(0, 0, 0.5, 0),
+                        BackgroundTransparency = 1
+                    }),
+                    l('TextLabel', {
                         RichText = true,
                         Text = n.Title,
                         FontFace = Font.new(
@@ -4314,7 +4322,7 @@ local aa = {
             ElementBorder = Color3.fromRGB(42, 51, 64),    
             InElementBorder = Color3.fromRGB(58, 70, 85),
             ElementTransparency = 0.12,                   
-            ToggleSlider = Color3.fromRGB(140, 120, 160),
+            ToggleSlider = Color3.fromRGB(64, 97, 133),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
             DropdownFrame = Color3.fromRGB(28, 34, 42),
