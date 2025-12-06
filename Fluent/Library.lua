@@ -6,9 +6,9 @@ local a, b = {
             {18, 'ModuleScript', {'Creator'}}, {28, 'ModuleScript', {'Icons'}},
             {
                 47, 'ModuleScript', {'Themes'}, {
-                    {50, 'ModuleScript', {'Dark'}},
+                    {50, 'ModuleScript', {'Faded'}},
                     {52, 'ModuleScript', {'Light'}},
-                    {51, 'ModuleScript', {'Darker'}},
+                    {51, 'ModuleScript', {'Dark'}},
                     {53, 'ModuleScript', {'Rose'}},
                     {49, 'ModuleScript', {'Aqua'}},
                     {48, 'ModuleScript', {'Amethyst'}}
@@ -4247,7 +4247,7 @@ local aa = {
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
         local af = {
-            Names = {'Dark', 'Darker', 'Light'}
+            Names = {'Dark', 'Light'}
         }
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
@@ -4340,7 +4340,7 @@ local aa = {
     [50] = function()
         local aa, ab, ac, ad, ae = b(50)
         return {
-            Name = 'Dark',
+            Name = 'Faded',
             Accent = Color3.fromRGB(96, 205, 255),
             AcrylicMain = Color3.fromRGB(60, 60, 60),
             AcrylicBorder = Color3.fromRGB(90, 90, 90),
@@ -4381,7 +4381,7 @@ local aa = {
     [51] = function()
         local aa, ab, ac, ad, ae = b(51)
         return {
-            Name = 'Darker',
+            Name = 'Dark',
             Accent = Color3.fromRGB(72, 138, 182),
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),
