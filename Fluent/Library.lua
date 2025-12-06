@@ -4247,8 +4247,11 @@ local aa = {
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
         local af = {
-            Names = {'Dark', 'Darker', 'Light'}
+            Names = {'Default', 'Dark', 'Light'}
         }
+        if af.Current == 'Dark' then
+            af.Current = 'Darker'
+        end
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
