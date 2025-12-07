@@ -1224,11 +1224,11 @@ local aa = {
                         SortOrder = Enum.SortOrder.LayoutOrder
                     }), 
                     l('ImageLabel', {
-                        Image = "rbxassetid://121078597022763",
-                        Size = UDim2.fromOffset(18, 18),
-                        AnchorPoint = Vector2.new(0, 0.5),
-                        Position = UDim2.new(0, 0, 0.5, 0),
-                        BackgroundTransparency = 1
+                        Image = 'rbxassetid://121078597022763',
+                        BackgroundTransparency = 1,
+                        Size = UDim2.fromOffset(20, 20),
+                        AnchorPoint = Vector2.new(0, 0.5),    
+                        Position = UDim2.new(0, 8, 0.5, 0)
                     }),
                     l('TextLabel', {
                         RichText = true,
@@ -3823,7 +3823,7 @@ local aa = {
             assert(c, 'Missing argument #1: initialValues')
             assert(typeof(c) == 'table', 'initialValues must be a table!')
             assert(not c.step,
-                   [[initialValues contains disallowed property "step". Did you mean to put a table of values here?]])
+                   [[initialValues contains disallowed property 'step'. Did you mean to put a table of values here?]])
             local e = setmetatable(af.new(), ai)
             if d ~= nil then
                 e._useImplicitConnections = d
@@ -3852,7 +3852,7 @@ local aa = {
         end
         function ai.setGoal(c, d)
             assert(not d.step,
-                   [[goals contains disallowed property "step". Did you mean to put a table of goals here?]])
+                   [[goals contains disallowed property 'step'. Did you mean to put a table of goals here?]])
             c._complete = false
             c._onStart:fire()
             for e, f in pairs(d) do
@@ -4242,7 +4242,7 @@ local aa = {
                 expect(af(aj)).to.equal(true)
                 expect(af(c)).to.equal(true)
             end)
-            it("shouldn't detect things that aren't motors",
+            it('shouldn't detect things that aren't motors',
                function() expect(af {}).to.equal(false) end)
             it('should return the proper motor type', function()
                 local d, e = af(aj)
@@ -4545,7 +4545,7 @@ do
     for A, B in ag, y do
         z[A] = function(C, ...)
             if not x[C] then
-                ad("Expected ':' not '.' calling member function " .. A, 1)
+                ad('Expected ':' not '.' calling member function ' .. A, 1)
             end
             return B(C, ...)
         end
@@ -4553,8 +4553,8 @@ do
     local C = function(C, D, E)
         local F, G, H, I, J = ac({}, {__mode = 'k'}), function(F)
             ad(
-                F .. ' is not a valid (virtual) member of ' .. C .. ' "' .. D ..
-                    '"', 1)
+                F .. ' is not a valid (virtual) member of ' .. C .. ' '' .. D ..
+                    ''', 1)
         end, function(F)
             ad('Unable to assign (virtual) property ' .. F ..
                    '. Property is read only', 1)
