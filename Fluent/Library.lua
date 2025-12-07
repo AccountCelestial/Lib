@@ -1256,7 +1256,7 @@ local aa = {
                     })
                 }), 
                 l('ImageLabel', {
-                    Image = 'rbxassetid://121078597022763',
+                    Image = 'rbxassetid://80235570914291',
                     BackgroundTransparency = 1,
                     Size = UDim2.fromOffset(30, 30),
                     AnchorPoint = Vector2.new(0, 0.5),
@@ -4328,6 +4328,8 @@ local aa = {
             ElementBorder = Color3.fromRGB(40, 55, 85),
             InElementBorder = Color3.fromRGB(55, 75, 105),
             ElementTransparency = 0.82,
+            ToggleSlider = Color3.fromRGB(107, 139, 199), 
+            ToggleToggled = Color3.fromRGB(0, 0, 0),
             DropdownFrame = Color3.fromRGB(90, 120, 160),
             DropdownHolder = Color3.fromRGB(35, 45, 70),
             DropdownBorder = Color3.fromRGB(25, 35, 55),
