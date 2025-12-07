@@ -1228,7 +1228,7 @@ local aa = {
                         BackgroundTransparency = 1,
                         Size = UDim2.fromOffset(30, 30),
                         AnchorPoint = Vector2.new(0, 0.5),    
-                        Position = UDim2.new(0, 8, 0.5, 10)
+                        Position = UDim2.new(0, 8, 0.5, 20)
                     }),
                     l('TextLabel', {
                         RichText = true,
@@ -4317,11 +4317,11 @@ local aa = {
             ),
             AcrylicNoise = 0.92,
             TitleBarLine = Color3.fromRGB(42, 51, 64),
-            Tab = Color3.fromRGB(26, 34, 44),               
-            Element = Color3.fromRGB(47, 58, 72),         
-            ElementBorder = Color3.fromRGB(99, 113, 133),   
-            InElementBorder = Color3.fromRGB(143, 164, 194),
-            ElementTransparency = 0.08,                 
+            Tab = Color3.fromRGB(22, 30, 38),               
+            Element = Color3.fromRGB(40, 50, 62),           
+            ElementBorder = Color3.fromRGB(85, 98, 120),    
+            InElementBorder = Color3.fromRGB(120, 140, 165),
+            ElementTransparency = 0.18,
             ToggleSlider = Color3.fromRGB(90, 158, 231),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
