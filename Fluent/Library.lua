@@ -1228,7 +1228,7 @@ local aa = {
                         BackgroundTransparency = 1,
                         Size = UDim2.fromOffset(30, 30),
                         AnchorPoint = Vector2.new(0, 0.5),    
-                        Position = UDim2.new(0, 8, 0.5, 100)
+                        Position = UDim2.new(0, 8, 0.5, 200)
                     }),
                     l('TextLabel', {
                         RichText = true,
