@@ -1224,7 +1224,7 @@ local aa = {
                         SortOrder = Enum.SortOrder.LayoutOrder
                     }), 
                     l('ImageLabel', {
-                        Image = "rbxassetid://90150694641455",
+                        Image = "rbxassetid://71781142843779",
                         Size = UDim2.fromOffset(18, 18),
                         AnchorPoint = Vector2.new(0, 0.5),
                         Position = UDim2.new(0, 0, 0.5, 0),
@@ -4255,7 +4255,7 @@ local aa = {
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
         local af = {
-            Names = {'Default', 'Dark', 'Darker', 'Light'}
+            Names = {'Default', 'Darker', 'Light'}
         }
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
@@ -4322,7 +4322,7 @@ local aa = {
             ElementBorder = Color3.fromRGB(42, 51, 64),    
             InElementBorder = Color3.fromRGB(58, 70, 85),
             ElementTransparency = 0.12,                   
-            ToggleSlider = Color3.fromRGB(64, 97, 133),
+            ToggleSlider = Color3.fromRGB(58, 136, 219),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
             DropdownFrame = Color3.fromRGB(28, 34, 42),
