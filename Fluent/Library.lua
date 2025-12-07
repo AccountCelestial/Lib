@@ -1226,9 +1226,9 @@ local aa = {
                     l('ImageLabel', {
                         Image = 'rbxassetid://121078597022763',
                         BackgroundTransparency = 1,
-                        Size = UDim2.fromOffset(20, 20),
+                        Size = UDim2.fromOffset(30, 30),
                         AnchorPoint = Vector2.new(0, 0.5),    
-                        Position = UDim2.new(0, 8, 0.5, 0)
+                        Position = UDim2.new(0, 8, 0.5, 4)
                     }),
                     l('TextLabel', {
                         RichText = true,
@@ -4317,12 +4317,12 @@ local aa = {
             ),
             AcrylicNoise = 0.92,
             TitleBarLine = Color3.fromRGB(42, 51, 64),
-            Tab = Color3.fromRGB(16, 20, 26),             
-            Element = Color3.fromRGB(28, 34, 42),          
-            ElementBorder = Color3.fromRGB(42, 51, 64),   
-            InElementBorder = Color3.fromRGB(54, 67, 85),  
+            Tab = Color3.fromRGB(26, 34, 44),               
+            Element = Color3.fromRGB(47, 58, 72),         
+            ElementBorder = Color3.fromRGB(99, 113, 133),   
+            InElementBorder = Color3.fromRGB(143, 164, 194),
             ElementTransparency = 0.08,                 
-            ToggleSlider = Color3.fromRGB(42, 139, 241),
+            ToggleSlider = Color3.fromRGB(90, 158, 231),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
             DropdownFrame = Color3.fromRGB(28, 34, 42),
