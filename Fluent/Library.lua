@@ -1224,7 +1224,7 @@ local aa = {
                         SortOrder = Enum.SortOrder.LayoutOrder
                     }), 
                     l('ImageLabel', {
-                        Image = "rbxassetid://71781142843779",
+                        Image = "rbxassetid://121078597022763",
                         Size = UDim2.fromOffset(18, 18),
                         AnchorPoint = Vector2.new(0, 0.5),
                         Position = UDim2.new(0, 0, 0.5, 0),
