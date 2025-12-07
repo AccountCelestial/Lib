@@ -114,14 +114,14 @@ local aa = {
                 local C, D = B:find ':%d+: '
                 if not D then
                     return x:Notify{
-                        Title = 'Interface',
+                        Title = 'Xecret Hub',
                         Content = 'Callback error',
                         SubContent = B,
                         Duration = 5
                     }
                 end
                 return x:Notify{
-                    Title = 'Interface',
+                    Title = 'Xecret Hub',
                     Content = 'Callback error',
                     SubContent = B:sub(D + 1),
                     Duration = 5
@@ -1518,7 +1518,7 @@ local aa = {
                     local N = u.MinimizeKeybind and u.MinimizeKeybind.Value or
                                   u.MinimizeKey.Name
                     u:Notify{
-                        Title = 'Interface',
+                        Title = 'Xecret Hub',
                         Content = 'Press ' .. N .. ' to toggle the inteface.',
                         Duration = 6
                     }
@@ -4317,11 +4317,11 @@ local aa = {
             ),
             AcrylicNoise = 0.92,
             TitleBarLine = Color3.fromRGB(42, 51, 64),
-            Tab = Color3.fromRGB(40, 55, 70),            
-            Element = Color3.fromRGB(30, 36, 46),       
-            ElementBorder = Color3.fromRGB(50, 70, 90),
-            InElementBorder = Color3.fromRGB(80, 120, 150), 
-            ElementTransparency = 0.20,
+            Tab = Color3.fromRGB(16, 20, 26),             
+            Element = Color3.fromRGB(28, 34, 42),          
+            ElementBorder = Color3.fromRGB(42, 51, 64),   
+            InElementBorder = Color3.fromRGB(54, 67, 85),  
+            ElementTransparency = 0.08,                 
             ToggleSlider = Color3.fromRGB(42, 139, 241),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
