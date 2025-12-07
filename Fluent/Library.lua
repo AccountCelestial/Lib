@@ -1,9 +1,5 @@
 --Library provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 
-getgenv().Library = Library;
-getgenv().Options = Library and Library.Options;
-getgenv().Toggles = Library and Library.Toggles;
-
 local a, b = {
     {
         1, 'ModuleScript', {'MainModule'}, {
@@ -4318,7 +4314,7 @@ local aa = {
             Name = 'Default',
             Accent = Color3.fromRGB(0, 0, 0),
             BackgroundColor = Color3.fromRGB(255, 68, 177),
-            TextColor = Color3.fromRGB(255, 255, 255),
+            TextColor = Color3.fromRGB(255, 255, 255)
         }
     end,
     [50] = function()
