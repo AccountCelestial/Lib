@@ -1,5 +1,9 @@
 --Library provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 
+getgenv().Library = Library;
+getgenv().Options = Library and Library.Options;
+getgenv().Toggles = Library and Library.Toggles;
+
 local a, b = {
     {
         1, 'ModuleScript', {'MainModule'}, {
@@ -1223,12 +1227,8 @@ local aa = {
                         FillDirection = Enum.FillDirection.Horizontal,
                         SortOrder = Enum.SortOrder.LayoutOrder
                     }), 
-                    l('ImageLabel', {
-                        Image = 'rbxassetid://121078597022763',
-                        BackgroundTransparency = 1,
-                        Size = UDim2.fromOffset(30, 30),
-                        AnchorPoint = Vector2.new(0, 0.5),    
-                        Position = UDim2.new(0, 8, 0.5, 200)
+                    l('UIPadding', {
+                        PaddingLeft = UDim.new(0, 30) 
                     }),
                     l('TextLabel', {
                         RichText = true,
@@ -1258,7 +1258,15 @@ local aa = {
                         BackgroundTransparency = 1,
                         ThemeTag = {TextColor3 = 'Text'}
                     })
-                }), l('Frame', {
+                }), 
+                l('ImageLabel', {
+                    Image = 'rbxassetid://121078597022763',
+                    BackgroundTransparency = 1,
+                    Size = UDim2.fromOffset(30, 30),
+                    AnchorPoint = Vector2.new(0, 0.5),
+                    Position = UDim2.new(0, 12, 0.5, 0)
+                }),
+                l('Frame', {
                     BackgroundTransparency = 0.5,
                     Size = UDim2.new(1, 0, 0, 1),
                     Position = UDim2.new(0, 0, 1, 0),
@@ -4321,7 +4329,7 @@ local aa = {
             Element = Color3.fromRGB(97, 109, 126),
             ElementBorder = Color3.fromRGB(60, 70, 82),
             InElementBorder = Color3.fromRGB(90, 104, 122),
-            ElementTransparency = 0.8,            
+            ElementTransparency = 1,            
             ToggleSlider = Color3.fromRGB(90, 158, 231),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             SliderRail = Color3.fromRGB(35, 42, 50),
