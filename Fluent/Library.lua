@@ -1275,9 +1275,12 @@ local aa = {
                     Title = 'Close',
                     Content = 'Are you sure you want to unload the Xecret Hub?',
                     Buttons = {
-                        {Title = 'Yes', Callback = function()
-                            p:Destroy()
-                        end}, {Title = 'No'}
+                    Callback = function()
+                        if getgenv().OnFluentClose then
+                            pcall(getgenv().OnFluentClose)
+                        end
+                        p:Destroy()
+                    end
                     }
                 }
             end)
