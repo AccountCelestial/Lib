@@ -4242,7 +4242,7 @@ local aa = {
                 expect(af(aj)).to.equal(true)
                 expect(af(c)).to.equal(true)
             end)
-            it('shouldn't detect things that aren't motors',
+            it("shouldn't detect things that aren't motors",
                function() expect(af {}).to.equal(false) end)
             it('should return the proper motor type', function()
                 local d, e = af(aj)
@@ -4545,7 +4545,7 @@ do
     for A, B in ag, y do
         z[A] = function(C, ...)
             if not x[C] then
-                ad('Expected ':' not '.' calling member function ' .. A, 1)
+                ad("Expected ':' not '.' calling member function " .. A, 1)
             end
             return B(C, ...)
         end
@@ -4553,8 +4553,7 @@ do
     local C = function(C, D, E)
         local F, G, H, I, J = ac({}, {__mode = 'k'}), function(F)
             ad(
-                F .. ' is not a valid (virtual) member of ' .. C .. ' '' .. D ..
-                    ''', 1)
+                F .. " is not a valid (virtual) member of '" .. C .. "' (" .. D .. ")", 1)
         end, function(F)
             ad('Unable to assign (virtual) property ' .. F ..
                    '. Property is read only', 1)
