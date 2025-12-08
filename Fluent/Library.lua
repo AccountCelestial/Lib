@@ -1273,7 +1273,6 @@ local aa = {
                               function()
                 p.Window:Dialog{
                     Title = 'Close',
-                    Content = 'Are you sure you want to unload the Xecret Hub?',
                     Callback = function()
                         p:Destroy()
                     end
