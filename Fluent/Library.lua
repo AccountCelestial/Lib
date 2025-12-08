@@ -1273,9 +1273,12 @@ local aa = {
                               function()
                 p.Window:Dialog{
                     Title = 'Close',
-                    Callback = function()
-                        p:Destroy()
-                    end
+                    Content = 'Are you sure you want to unload the Xecret Hub?',
+                    Buttons = {
+                        {Title = 'Yes', Callback = function()
+                            p:Destroy()
+                        end}, {Title = 'No'}
+                    }
                 }
             end)
             o.MaxButton = q(i.Max, UDim2.new(1, -40, 0, 4), o.Frame, function()
