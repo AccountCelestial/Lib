@@ -1,5 +1,4 @@
---Library provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
-
+-- Library provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local a, b = {
     {
         1, 'ModuleScript', {'MainModule'}, {
@@ -1222,10 +1221,7 @@ local aa = {
                         Padding = UDim.new(0, 5),
                         FillDirection = Enum.FillDirection.Horizontal,
                         SortOrder = Enum.SortOrder.LayoutOrder
-                    }), 
-                    l('UIPadding', {
-                        PaddingLeft = UDim.new(0, 30) 
-                    }),
+                    }), l('UIPadding', {PaddingLeft = UDim.new(0, 30)}),
                     l('TextLabel', {
                         RichText = true,
                         Text = n.Title,
@@ -1254,15 +1250,13 @@ local aa = {
                         BackgroundTransparency = 1,
                         ThemeTag = {TextColor3 = 'Text'}
                     })
-                }), 
-                l('ImageLabel', {
+                }), l('ImageLabel', {
                     Image = 'rbxassetid://80235570914291',
                     BackgroundTransparency = 1,
                     Size = UDim2.fromOffset(30, 30),
                     AnchorPoint = Vector2.new(0, 0.5),
                     Position = UDim2.new(0, 12, 0.5, 0)
-                }),
-                l('Frame', {
+                }), l('Frame', {
                     BackgroundTransparency = 0.5,
                     Size = UDim2.new(1, 0, 0, 1),
                     Position = UDim2.new(0, 0, 1, 0),
@@ -1275,9 +1269,15 @@ local aa = {
                     Title = 'Close',
                     Content = 'Are you sure you want to unload the Xecret Hub?',
                     Buttons = {
-                        {Title = 'Yes', Callback = function()
-                            p:Destroy()
-                        end}, {Title = 'No'}
+                        {
+                            Title = 'Yes',
+                            Callback = function()
+                                if getgenv().FluentUnload then
+                                    getgenv().FluentUnload()
+                                end
+                                p:Destroy()
+                            end
+                        }, {Title = 'No'}
                     }
                 }
             end)
@@ -4258,9 +4258,7 @@ local aa = {
     end,
     [47] = function()
         local aa, ab, ac, ad, ae = b(47)
-        local af = {
-            Names = {'Default', 'Dark', 'Light'}
-        }
+        local af = {Names = {'Default', 'Dark', 'Light'}}
         for ag, ah in next, ab:GetChildren() do
             local aj = ac(ah)
             af[aj.Name] = aj
@@ -4315,11 +4313,9 @@ local aa = {
             Accent = Color3.fromRGB(77, 163, 255),
             AcrylicMain = Color3.fromRGB(30, 30, 40),
             AcrylicBorder = Color3.fromRGB(60, 70, 90),
-            AcrylicGradient = ColorSequence.new(
-                Color3.fromRGB(20, 30, 50),
-                Color3.fromRGB(10, 20, 35)
-            ),
-            BackgroundColor = Color3.fromRGB(130, 174, 255), 
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(20, 30, 50),
+                                                Color3.fromRGB(10, 20, 35)),
+            BackgroundColor = Color3.fromRGB(130, 174, 255),
             TextColor = Color3.fromRGB(255, 255, 255),
             AcrylicNoise = 0.94,
             TitleBarLine = Color3.fromRGB(70, 90, 120),
@@ -4328,7 +4324,7 @@ local aa = {
             ElementBorder = Color3.fromRGB(40, 55, 85),
             InElementBorder = Color3.fromRGB(55, 75, 105),
             ElementTransparency = 0.82,
-            ToggleSlider = Color3.fromRGB(107, 139, 199), 
+            ToggleSlider = Color3.fromRGB(107, 139, 199),
             ToggleToggled = Color3.fromRGB(0, 0, 0),
             DropdownFrame = Color3.fromRGB(90, 120, 160),
             DropdownHolder = Color3.fromRGB(35, 45, 70),
@@ -4350,10 +4346,8 @@ local aa = {
             Accent = Color3.fromRGB(72, 138, 182),
             AcrylicMain = Color3.fromRGB(30, 30, 30),
             AcrylicBorder = Color3.fromRGB(60, 60, 60),
-            AcrylicGradient = ColorSequence.new(
-                Color3.fromRGB(25, 25, 25),
-                Color3.fromRGB(15, 15, 15)
-            ),
+            AcrylicGradient = ColorSequence.new(Color3.fromRGB(25, 25, 25),
+                                                Color3.fromRGB(15, 15, 15)),
             AcrylicNoise = 0.94,
             TitleBarLine = Color3.fromRGB(65, 65, 65),
             Tab = Color3.fromRGB(100, 100, 100),
@@ -4551,7 +4545,8 @@ do
     local C = function(C, D, E)
         local F, G, H, I, J = ac({}, {__mode = 'k'}), function(F)
             ad(
-                F .. " is not a valid (virtual) member of '" .. C .. "' (" .. D .. ")", 1)
+                F .. " is not a valid (virtual) member of '" .. C .. "' (" .. D ..
+                    ")", 1)
         end, function(F)
             ad('Unable to assign (virtual) property ' .. F ..
                    '. Property is read only', 1)
