@@ -1523,7 +1523,7 @@ local aa = {
                                   u.MinimizeKey.Name
                     u:Notify{
                         Title = 'Xecret Hub',
-                        Content = 'Press ' .. N .. ' to toggle the inteface.',
+                        Content = 'Press ' .. N .. ' to toggle the Xecret Hub.',
                         Duration = 6
                     }
                 end
