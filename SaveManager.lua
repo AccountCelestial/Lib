@@ -1,7 +1,7 @@
 local httpService = game:GetService("HttpService");
 local SaveManager = {};
 do
-	SaveManager.Folder = "SaveSettings";
+	SaveManager.Folder = "XecretHub/SaveManager";
 	SaveManager.Ignore = {};
 	SaveManager.LoadedConfigs = {};
 	SaveManager.Parser = {
