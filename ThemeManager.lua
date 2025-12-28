@@ -398,10 +398,13 @@ local ThemeManager = {} do
 		local fields = { "FontColor", "MainColor", "AccentColor", "BackgroundColor", "OutlineColor", "VideoLink" }
 
 		for _, field in next, fields do
-			if field == "VideoLink" then
-				theme[field] = getgenv().Linoria.Options[field].Value
-			else
-				theme[field] = getgenv().Linoria.Options[field].Value:ToHex()
+			local opt = getgenv().Linoria.Options[field]
+			if opt then
+				if field == "VideoLink" then
+					theme[field] = opt.Value
+				else
+					theme[field] = opt:GetValue():ToHex()
+				end
 			end
 		end
 
