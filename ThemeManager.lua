@@ -222,25 +222,22 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:ThemeUpdate()
+		-- This allows us to force apply themes without loading the themes tab :)
 		if self.Library.InnerVideoBackground ~= nil then
 			self.Library.InnerVideoBackground.Visible = false
 		end
-
+		
 		local options = { "FontColor", "MainColor", "AccentColor", "BackgroundColor", "OutlineColor", "VideoLink" }
-
-		for _, field in next, options do
-			local opt = getgenv().Linoria.Options[field]
-			if opt then
+		for i, field in next, options do
+			if getgenv().Linoria.Options and getgenv().Linoria.Options[field] then
+				self.Library[field] = getgenv().Linoria.Options[field].Value
 				if field == "VideoLink" then
-					self.Library[field] = opt.Value
-					ApplyBackgroundVideo(opt.Value)
-				else
-					self.Library[field] = opt:GetValue()
+					ApplyBackgroundVideo(getgenv().Linoria.Options[field].Value)
 				end
 			end
 		end
 
-		self.Library.AccentColorDark = self.Library:GetDarkerColor(self.Library.AccentColor)
+		self.Library.AccentColorDark = self.Library:GetDarkerColor(self.Library.AccentColor);
 		self.Library:UpdateColorsUsingRegistry()
 	end
 
@@ -401,13 +398,10 @@ local ThemeManager = {} do
 		local fields = { "FontColor", "MainColor", "AccentColor", "BackgroundColor", "OutlineColor", "VideoLink" }
 
 		for _, field in next, fields do
-			local opt = getgenv().Linoria.Options[field]
-			if opt then
-				if field == "VideoLink" then
-					theme[field] = opt.Value
-				else
-					theme[field] = opt:GetValue():ToHex()
-				end
+			if field == "VideoLink" then
+				theme[field] = getgenv().Linoria.Options[field].Value
+			else
+				theme[field] = getgenv().Linoria.Options[field].Value:ToHex()
 			end
 		end
 
