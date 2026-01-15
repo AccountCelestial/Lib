@@ -24,13 +24,13 @@ ScreenGui.Parent = GetHUI();
 local Toggles = {};
 local Options = {};
 
-getgenv().Linoria = { 
+getgenv().MouseLinoria = { 
 	Toggles = Toggles,
 	Options = Options
 }
 
-getgenv().Toggles = Toggles; -- if you load infinite yeild after you executed any script with LinoriaLib it will just break the whole UI lib :/ (thats why I added getgenv().Linoria)
-getgenv().Options = Options;
+getgenv().MouseToggles = Toggles; -- if you load infinite yeild after you executed any script with MouseLinoriaLib it will just break the whole UI lib :/ (thats why I added getgenv().MouseLinoria)
+getgenv().MouseOptions = Options;
 
 local LibraryMainOuterFrame = nil;
 local Library = {
